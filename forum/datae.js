@@ -36,7 +36,20 @@ var defaultThreads = [
                 content: "Hey to you too"
             }
         ]
-    }
+    },
+    {
+        id: 0,
+        title: "Oh no. It's down.",
+        author: "Admin",
+        date: Date.now(),
+        connent: "Thread content 0",
+        comments: [
+            {
+                author: "Admin",
+                date: Date.now(),
+                content: "Rip, that didn't last long.
+            }
+        ]
 ]
 
 var threads = defaultThreads
