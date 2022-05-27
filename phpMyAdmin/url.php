@@ -1,42 +1,22 @@
 <?php
-
-declare(strict_types=1);
-
-use PhpMyAdmin\Common;
-use PhpMyAdmin\UrlRedirector;
-
-if (! defined('ROOT_PATH')) {
-    // phpcs:disable PSR1.Files.SideEffects
-    define('ROOT_PATH', __DIR__ . DIRECTORY_SEPARATOR);
-    // phpcs:enable
-}
-
-if (PHP_VERSION_ID < 70205) {
-    die('<p>PHP 7.2.5+ is required.</p><p>Currently installed version is: ' . PHP_VERSION . '</p>');
-}
-
-// phpcs:disable PSR1.Files.SideEffects
-define('PHPMYADMIN', true);
-// phpcs:enable
-
-require_once ROOT_PATH . 'libraries/constants.php';
+/* vim: set expandtab sw=4 ts=4 sts=4: */
+/**
+ * URL redirector to avoid leaking Referer with some sensitive information.
+ *
+ * @package PhpMyAdmin
+ */
 
 /**
- * Activate autoloader
+ * Gets core libraries and defines some variables
  */
-if (! @is_readable(AUTOLOAD_FILE)) {
-    die(
-        '<p>File <samp>' . AUTOLOAD_FILE . '</samp> missing or not readable.</p>'
-        . '<p>Most likely you did not run Composer to '
-        . '<a href="https://docs.phpmyadmin.net/en/latest/setup.html#installing-from-git">'
-        . 'install library files</a>.</p>'
-    );
+require_once './libraries/common.inc.php';
+
+if (! PMA_isValid($_GET['url'])
+    || ! preg_match('/^https?:\/\/[^\n\r]*$/', $_GET['url'])
+) {
+    header('Location: ' . $cfg['PmaAbsoluteUri']);
+} else {
+    header('Location: ' . $_GET['url']);
 }
-
-require AUTOLOAD_FILE;
-
-$isMinimumCommon = true;
-
-Common::run();
-
-UrlRedirector::redirect();
+die();
+?>
