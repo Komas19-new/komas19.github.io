@@ -87,6 +87,10 @@
   }
 }
 
+.maintenancefinished {
+  pointer-events: none;
+}
+
 .dark-mode {
   background-color: black;
   color: white;
