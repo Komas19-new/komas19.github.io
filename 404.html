@@ -1,3 +1,23 @@
+<link rel="stylesheet" href="/socials/styles.css">
 <title>NotFound</title>
 404 Not Found
 File wasn't found in this server.
+
+<h3 id="DarkModetext">Dark Mode is On</h3>
+
+<script>
+  function darkMode() {
+    var element = document.body;
+    var content = document.getElementById("DarkModetext");
+    element.className = "dark-mode";
+    content.innerText = "Dark Mode is ON";
+  }
+  function lightMode() {
+    var element = document.body;
+    var content = document.getElementById("DarkModetext");
+    element.className = "light-mode";
+    content.innerText = "Dark Mode is OFF";
+  }
+</script>
+<button onclick="darkMode()">Dark Mode</button>
+<button onclick="lightMode()">Light Mode</button>
