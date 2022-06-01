@@ -3,5 +3,5 @@ xhr.open('get', 'https://economy.roblox.com/v1/user/currency');
 xhr.send();
 
 xhr.onload = function() {
-    Element.(xhr.response);
+    print(xhr.response);
 };
