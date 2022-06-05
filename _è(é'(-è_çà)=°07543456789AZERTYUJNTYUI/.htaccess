@@ -1,4 +1,0 @@
-AuthType Basic
-AuthName "This Area is Password Protected"
-AuthUserFile /htpasswd2389236/.htpasswd
-Require valid-user
