@@ -1,1 +1,1 @@
-Header set Access-Control-Allow-Origin 'roblox.com'
+Header set Access-Control-Allow-Origin *
