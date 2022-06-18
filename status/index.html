@@ -109,11 +109,14 @@ ko.applyBindings(komodel);
 
 
 <div class="alertworking"> 
-    <strong>Maintenance Pause</strong> The site is working.
+    <strong>Working</strong> The site is working.
 </div>
 
 <ul data-bind="foreach:servers">
-    <li> <a href="#" data-bind="text:name,attr:{href: 'http://'+name}">tester</a> <span data-bind="text:status,css:status"></span>
+    <p>
+         
+    <p>
+    <li> <a href="#" data-bind="text:name,attr:{href: 'http://'+name}">error</a> <span data-bind="text:status,css:status"></span>
 
     </li>
 </ul>
