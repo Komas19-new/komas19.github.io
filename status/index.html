@@ -23,6 +23,15 @@
     color: white;
 }
 
+.responded {
+    color:green;
+}
+.checking,.unchecked {
+    color:#FF8C00;
+}
+.timeout {
+    color:red;
+}
 </style>
 
 <link rel="stylesheet" href="https://komas19.tk/styles.css">
@@ -39,11 +48,72 @@ function lightMode() {
     element.className = "light-mode";
     content.innerText = "Dark Mode is OFF";
 }
+function ping(ip, callback) {
+
+    if (!this.inUse) {
+        this.status = 'unchecked';
+        this.inUse = true;
+        this.callback = callback;
+        this.ip = ip;
+        var _that = this;
+        this.img = new Image();
+        this.img.onload = function () {
+            _that.inUse = false;
+            _that.callback('responded');
+
+        };
+        this.img.onerror = function (e) {
+            if (_that.inUse) {
+                _that.inUse = false;
+                _that.callback('responded', e);
+            }
+
+        };
+        this.start = new Date().getTime();
+        this.img.src = "http://" + ip;
+        this.timer = setTimeout(function () {
+            if (_that.inUse) {
+                _that.inUse = false;
+                _that.callback('timeout');
+            }
+        }, 1500);
+    }
+}
+
+var PingModel = function (servers) {
+    var self = this;
+    var myServers = [];
+    ko.utils.arrayForEach(servers, function (location) {
+        myServers.push({
+            name: location,
+            status: ko.observable('unchecked')
+        });
+    });
+    self.servers = ko.observableArray(myServers);
+    ko.utils.arrayForEach(self.servers(), function (s) {
+        s.status('checking');
+        new ping(s.name, function (status, e) {
+            s.status(status);
+        });
+    });
+};
+var komodel = new PingModel(['www.komas19.tk',
+    'komas19.tk',
+    'status.komas19.tk',
+    'ping.komas19.tk'
+    ]);
+ko.applyBindings(komodel);
 </script>
 <button onclick="darkMode()">Dark Mode</button>
 <button onclick="lightMode()">Light Mode</button>
 
 
-<div class="alertmaintenance"> 
-    <strong>Maintenance Pause</strong> The site is going under maintenance Wednesday
+<div class="alertworking"> 
+    <strong>Maintenance Pause</strong> The site is working.
 </div>
+
+<ul data-bind="foreach:servers">
+    <li> <a href="#" data-bind="text:name,attr:{href: 'http://'+name}">tester</a> <span data-bind="text:status,css:status"></span>
+
+    </li>
+</ul>
