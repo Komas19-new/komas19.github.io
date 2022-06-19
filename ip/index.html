@@ -7,10 +7,6 @@
 <button onclick="lightMode()">Light Mode</button>
 <h3 id="DarkModetext">Dark Mode is On</h3>
 <script>
-    let apiKey = '1be9a6884abd4c3ea143b59ca317c6b2';
-$.getJSON('https://ipgeolocation.abstractapi.com/v1/?api_key=' + apiKey, function(data) {
-  console.log(JSON.stringify(data, null, 2));
-});
     function darkMode() {
       var element = document.body;
       var content = document.getElementById("DarkModetext");
@@ -24,13 +20,9 @@ $.getJSON('https://ipgeolocation.abstractapi.com/v1/?api_key=' + apiKey, functio
       content.innerText = "Dark Mode is OFF";
     }
     </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <title>Your IP</title>
 </head>
 <body>
- Your IP address is: 
-<spoiler> 
 <iframe width="560" height="315" src="http://www.geoplugin.net/json.gp" title="GeoPlugin.net" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</spoiler>
 </body>
 </html>
