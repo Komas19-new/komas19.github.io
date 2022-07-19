@@ -1,0 +1,7 @@
+URL url = new URL ("https://games.roblox.com/v1/games/2316994223/votes");
+HttpURLConnection con = (HttpURLConnection)url.openConnection();
+con.setRequestMethod("GET");
+con.setRequestProperty("Content-Type", "application/json");
+con.setRequestProperty("Accept", "application/json");
+con.setDoOutput(true);
+String jsonInputString = "{"upVotes": con"}";
