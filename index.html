@@ -57,24 +57,24 @@ body {
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://komas19.pages.dev/styles.css">
 </head>
-<button onclick="darkMode()">Dark Mode</button> 
-<button onclick="lightMode()">Light Mode</button>
-<h3 id="DarkModetext">Dark Mode is On</h3>
-<script>
-    function darkMode() {
-      var element = document.body;
-      var content = document.getElementById("DarkModetext");
-      element.className = "dark-mode";
-      content.innerText = "Dark Mode is ON";
-    }
-    function lightMode() {
-      var element = document.body;
-      var content = document.getElementById("DarkModetext");
-      element.className = "light-mode";
-      content.innerText = "Dark Mode is OFF";
-    }
-</script>
 <div class="main">
+  <button onclick="darkMode()">Dark Mode</button> 
+  <button onclick="lightMode()">Light Mode</button>
+  <h3 id="DarkModetext">Dark Mode is On</h3>
+  <script>
+      function darkMode() {
+        var element = document.body;
+        var content = document.getElementById("DarkModetext");
+        element.className = "dark-mode";
+        content.innerText = "Dark Mode is ON";
+     }
+     function lightMode() {
+       var element = document.body;
+       var content = document.getElementById("DarkModetext");
+       element.className = "light-mode";
+       content.innerText = "Dark Mode is OFF";
+     }
+  </script>
   <body>
   Website coming soon!
   </body>
