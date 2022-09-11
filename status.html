@@ -3,6 +3,9 @@
 <meta content="https://komas19.pages.dev" property="og:url" />
 <meta content="https://cdn.discordapp.com/attachments/827177596407644221/1018202209764261908/unknown.png" property="og:image" />
 <meta content="#43B581" data-react-helmet="true" name="theme-color" />
+<meta http-equiv="refresh" content="99999999999999999999; URL=/maintenance.html" class="maintenancefinished"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://komas19.pages.dev/styles.css">
 <title>Status</title>
 <html>
 <head>
@@ -10,6 +13,48 @@
 <style>
 body {
   font-family: "Lato", sans-serif;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 
 .alertworking {
@@ -91,12 +136,10 @@ body {
   <a href="status.html">Status</a>
   <a href="about.html">About</a>
   <a href="contact.html">Contact</a>
-
+  <button onclick="darkMode()">Dark Mode</button> 
+  <button onclick="lightMode()">Light Mode</button>
 </div>
 </body>
-<meta http-equiv="refresh" content="0; URL=/maintenance.html" class="maintenancefinished"/>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://komas19.pages.dev/styles.css">
 </head>
 <div class="main">
   <div class="topnav" id="NavTop">
@@ -117,24 +160,17 @@ body {
   <div class="alertworking"> 
     <strong>Working</strong> The site is working.
   </div>
-  <p>
-
-  </p>
-  <button onclick="darkMode()">Dark Mode</button> 
-  <button onclick="lightMode()">Light Mode</button>
-  <h3 id="DarkModetext">Dark Mode is On</h3>
+  <p></p>
   <script>
       function darkMode() {
         var element = document.body;
         var content = document.getElementById("DarkModetext");
         element.className = "dark-mode";
-        content.innerText = "Dark Mode is ON";
      }
      function lightMode() {
        var element = document.body;
        var content = document.getElementById("DarkModetext");
        element.className = "light-mode";
-       content.innerText = "Dark Mode is OFF";
      }
   </script>
 </div>

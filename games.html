@@ -4,6 +4,9 @@
 <meta content="https://komas19.pages.dev" property="og:url" />
 <meta content="https://cdn.discordapp.com/attachments/827177596407644221/1018202209764261908/unknown.png" property="og:image" />
 <meta content="#43B581" data-react-helmet="true" name="theme-color" />
+<meta http-equiv="refresh" content="99999999999999999999; URL=/maintenance.html" class="maintenancefinished"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://komas19.pages.dev/styles.css">
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -30,6 +33,10 @@ body {
   font-size: 25px;
   color: #818181;
   display: block;
+}
+
+.game {
+  padding: 6px 8px 6px 16px;
 }
 
 .sidenav a:hover {
@@ -67,11 +74,10 @@ body {
   <a href="status.html">Status</a>
   <a href="about.html">About</a>
   <a href="contact.html">Contact</a>
+  <button onclick="darkMode()">Dark Mode</button> 
+  <button onclick="lightMode()">Light Mode</button>
 </div>
 </body>
-<meta http-equiv="refresh" content="0; URL=/maintenance.html" class="maintenancefinished"/>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://komas19.pages.dev/styles.css">
 </head>
 <div class="main">
   <div class="topnav" id="NavTop">
@@ -89,25 +95,37 @@ body {
     
   </p>  
   <noscript><p>Please enable JavaScript in your browser for better use of the website.</p></noscript>
-  <button onclick="darkMode()">Dark Mode</button> 
-  <button onclick="lightMode()">Light Mode</button>
-  <h3 id="DarkModetext">Dark Mode is On</h3>
   <script>
       function darkMode() {
         var element = document.body;
         var content = document.getElementById("DarkModetext");
         element.className = "dark-mode";
-        content.innerText = "Dark Mode is ON";
      }
      function lightMode() {
        var element = document.body;
        var content = document.getElementById("DarkModetext");
        element.className = "light-mode";
-       content.innerText = "Dark Mode is OFF";
      }
   </script>
   <body>
-  Games coming soon!
+    This will only include my most popular games I made, and upcoming games!
+    <p></p>
+    <div class="game">
+      Komas's Difficulty Chart Obby
+      <a href="https://www.roblox.com/games/5470311330/BROKEN-FOREVER-Komass-Difficulty-Chart-Obby">
+        <img alt="Thumb" src="https://cdn.discordapp.com/attachments/827177596407644221/1018555365299847218/unknown.png" width="768" height="432">
+        </a>
+        <p></p>
+        The game was sadly abandonned due to glitch that makes the chat disappear.
+    </div>
+    <p></p>
+    Placeholder
+    <a href="about:blank">
+      <img alt="Thumb" src="about:blank" width="768" height="432">
+      </a>
+      <p></p>
+      Description Placeholder
+  </div>
   </body>
 </div>
 </html>
