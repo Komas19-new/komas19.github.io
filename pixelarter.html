@@ -62,6 +62,7 @@ body{
 <body>
     <div class="navbar">
         <button class="btn">Reset</button>
+        <button class ="erase">Erase</button>
         <input type="color" value="#00eeff" class="color">
         <input type="number" value="30" class="size">
     </div>
@@ -73,6 +74,7 @@ const sizeEl = document.querySelector('.size')
 let size = sizeEl.value
 const color = document.querySelector('.color')
 const resetBtn = document.querySelector('.btn')
+const Erase = document.querySelector('erase')
 
 let draw = false
 
@@ -105,6 +107,9 @@ function reset(){
     container.innerHTML = ''
     populate(size)
 }
+        
+function eraser(){
+    color.value = '#3d3d3d'
 
 resetBtn.addEventListener('click', reset)
 
