@@ -144,39 +144,8 @@ body {
        element.className = "light-mode";
      }
   </script>
-  <body>  
-  <script src="https://www.google.com/recaptcha/api.js"></script>
-  Please do the captcha do enter the home page.
-  <div class="g-recaptcha brochure__form__captcha" data-sitekey="6LfZZ14iAAAAAITw21D8FqU2mY1xxJ9xNc7-2LJu"></div>
+  <body>
+  Website coming soon!
   </body>
-
-  <?php $google_url = "https://www.google.com/recaptcha/api/siteverify";
-  $secret_key = 'YOUR_SECRET_KEY';
-  
-  $response = $_POST['g-recaptcha-response']; 
-  
-  $message  = 'Google reCaptcha Test';
-  
-  if(!empty($response))
-  {
-      $url = $google_url."?secret=".$secret_key."&response=".$response;
-  
-      $curl = curl_init();
-      curl_setopt($curl, CURLOPT_URL, $url);
-      curl_setopt($curl, CURLOPT_RETURNTRANSFER, TRUE);
-      curl_setopt($curl, CURLOPT_TIMEOUT, 15);
-      curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, TRUE);
-      curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, TRUE); 
-      $curlData = curl_exec($curl);
-  
-      curl_close($curl);
-  
-      $res = json_decode($curlData, TRUE);
-      if($res['success'] == 'true') 
-          $message = "Success!";
-      else
-          $message = "Enter captcha again!";
-  }
-  ?>
 </div>
 </html>
