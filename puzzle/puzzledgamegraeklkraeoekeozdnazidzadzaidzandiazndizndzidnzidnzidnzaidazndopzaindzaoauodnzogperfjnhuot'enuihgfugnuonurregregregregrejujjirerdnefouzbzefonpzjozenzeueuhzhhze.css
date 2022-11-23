@@ -1,0 +1,121 @@
+/* number of columns/rows, don't forget to adjust the HTML value */
+g {
+    --s: 300px;
+   /* size of the puzzle */
+    display: grid;
+    max-width: var(--s);
+    border: 1px solid;
+    margin: auto;
+    grid-template-columns: repeat(4, 1fr);
+}
+z {
+    aspect-ratio: 1;
+    outline: 1px dashed;
+    display: grid;
+    position: relative;
+    pointer-events: none;
+}
+a {
+    grid-area: 1;
+    width: 0;
+    transition: 0s 0.2s;
+    pointer-events: initial;
+}
+b {
+    grid-area: 1;
+    background: var(--i) 0/var(--s) var(--s);
+    box-shadow: 0 0 4px 1px red;
+    z-index: 2;
+    cursor: grab;
+    pointer-events: initial;
+}
+z:nth-of-type(1) b {
+    background-position: 0% 0%;
+    transform: translate(150%, 150%) rotate(156deg) translate(348%) rotate(-155deg);
+}
+z:nth-of-type(2) b {
+    background-position: 33.3333333333% 0%;
+    transform: translate(50%, 150%) rotate(78deg) translate(362%) rotate(-79deg);
+}
+z:nth-of-type(3) b {
+    background-position: 66.6666666667% 0%;
+    transform: translate(-50%, 150%) rotate(31deg) translate(342%) rotate(-34deg);
+}
+z:nth-of-type(4) b {
+    background-position: 100% 0%;
+    transform: translate(-150%, 150%) rotate(139deg) translate(335%) rotate(-147deg);
+}
+z:nth-of-type(5) b {
+    background-position: 0% 33.3333333333%;
+    transform: translate(150%, 50%) rotate(46deg) translate(369%) rotate(-55deg);
+}
+z:nth-of-type(6) b {
+    background-position: 33.3333333333% 33.3333333333%;
+    transform: translate(50%, 50%) rotate(145deg) translate(357%) rotate(-147deg);
+}
+z:nth-of-type(7) b {
+    background-position: 66.6666666667% 33.3333333333%;
+    transform: translate(-50%, 50%) rotate(138deg) translate(340%) rotate(-129deg);
+}
+z:nth-of-type(8) b {
+    background-position: 100% 33.3333333333%;
+    transform: translate(-150%, 50%) rotate(170deg) translate(383%) rotate(-168deg);
+}
+z:nth-of-type(9) b {
+    background-position: 0% 66.6666666667%;
+    transform: translate(150%, -50%) rotate(154deg) translate(332%) rotate(-152deg);
+}
+z:nth-of-type(10) b {
+    background-position: 33.3333333333% 66.6666666667%;
+    transform: translate(50%, -50%) rotate(114deg) translate(399%) rotate(-123deg);
+}
+z:nth-of-type(11) b {
+    background-position: 66.6666666667% 66.6666666667%;
+    transform: translate(-50%, -50%) rotate(98deg) translate(376%) rotate(-92deg);
+}
+z:nth-of-type(12) b {
+    background-position: 100% 66.6666666667%;
+    transform: translate(-150%, -50%) rotate(123deg) translate(301%) rotate(-130deg);
+}
+z:nth-of-type(13) b {
+    background-position: 0% 100%;
+    transform: translate(150%, -150%) rotate(123deg) translate(305%) rotate(-120deg);
+}
+z:nth-of-type(14) b {
+    background-position: 33.3333333333% 100%;
+    transform: translate(50%, -150%) rotate(55deg) translate(321%) rotate(-48deg);
+}
+z:nth-of-type(15) b {
+    background-position: 66.6666666667% 100%;
+    transform: translate(-50%, -150%) rotate(48deg) translate(356%) rotate(-44deg);
+}
+z:nth-of-type(16) b {
+    background-position: 100% 100%;
+    transform: translate(-150%, -150%) rotate(158deg) translate(380%) rotate(-153deg);
+}
+z b {
+    transition: 9999s 9999s;
+}
+z:active a {
+    width: 100%;
+    transition: 0s;
+}
+z a:hover ~ b {
+    transform: translate(0);
+    box-shadow: none;
+    transition: 0s;
+}
+body {
+    background: #2c6603;
+    color: #fff;
+    font-family: system-ui, sans-serif;
+}
+h1 {
+    font-size: 2rem;
+    margin: 0;
+    text-align: center;
+}
+p {
+    font-size: 1.2rem;
+    text-align: center;
+}
