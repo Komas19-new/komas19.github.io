@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   button.addEventListener('click', function() {
     // Refresh the page when the button is clicked
-    window.history.replaceState({}, '', '/');
+    window.history.replaceState({}, '', '/update');
     window.location.reload();
   });
 });
