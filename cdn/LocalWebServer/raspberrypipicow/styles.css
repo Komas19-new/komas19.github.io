@@ -70,6 +70,9 @@ p, input {
   .slider.round:before {
     border-radius: 50%;
   } 
+  button {
+    background-color: rgb(13, 133, 228)
+  }
   section {
   background-color: black;
   border-radius: 1em;

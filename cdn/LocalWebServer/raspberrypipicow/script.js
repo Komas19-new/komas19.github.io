@@ -13,3 +13,13 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  const button = document.querySelector('button');
+
+  button.addEventListener('click', function() {
+    // Refresh the page when the button is clicked
+    window.history.replaceState({}, '', '/');
+    window.location.reload();
+  });
+});
