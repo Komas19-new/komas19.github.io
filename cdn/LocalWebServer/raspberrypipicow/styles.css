@@ -124,7 +124,7 @@ html, body {
     pointer-events: none;
   }
 
-  body {
+  /* body { 
     overflow: hidden;
     background: linear-gradient(to right, gray, black);
     animation: gradient 10s linear infinite;
@@ -140,7 +140,7 @@ html, body {
     100% {
       background-position: 0% 50%;
     }
-  }
+  } */
   
   #h1 {
     background-color: transparent;
