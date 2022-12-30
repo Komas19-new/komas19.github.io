@@ -125,6 +125,7 @@ html, body {
   }
 
   body {
+    overflow: hidden;
     background: linear-gradient(to right, gray, black);
     animation: gradient 10s linear infinite;
   }

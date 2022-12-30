@@ -24,23 +24,25 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-var cursor = document.getElementById("cursor");
-var currentX = 0;
-var currentY = 0;
-var targetX = 0;
-var targetY = 0;
+window.onload = function() {
+  var cursor = document.getElementById("cursor");
+  var currentX = 0;
+  var currentY = 0;
+  var targetX = 0;
+  var targetY = 0;
 
-window.addEventListener("mousemove", function(event) {
-  targetX = event.pageX;
-  targetY = event.pageY;
-});
+  window.addEventListener("mousemove", function(event) {
+    targetX = event.pageX;
+    targetY = event.pageY;
+  });
 
-function animateCursor() {
-  currentX += (targetX - currentX) * 0.08;
-  currentY += (targetY - currentY) * 0.08;
-  cursor.style.left = currentX + "px";
-  cursor.style.top = currentY + "px";
-  requestAnimationFrame(animateCursor);
-}
+  function animateCursor() {
+    currentX += (targetX - currentX) * 0.08;
+    currentY += (targetY - currentY) * 0.08;
+    cursor.style.left = currentX + "px";
+    cursor.style.top = currentY + "px";
+    requestAnimationFrame(animateCursor);
+  }
 
-animateCursor();
+  animateCursor();
+};
