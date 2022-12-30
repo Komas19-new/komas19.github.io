@@ -142,5 +142,9 @@ html, body {
     }
   }
   
+  #h1 {
+    background-color: transparent;
+  }
+  
   
   
