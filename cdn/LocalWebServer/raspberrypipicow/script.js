@@ -24,8 +24,23 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+var cursor = document.getElementById("cursor");
+var currentX = 0;
+var currentY = 0;
+var targetX = 0;
+var targetY = 0;
+
 window.addEventListener("mousemove", function(event) {
-  var cursor = document.getElementById("cursor");
-  cursor.style.left = event.pageX + "px";
-  cursor.style.top = event.pageY + "px";
+  targetX = event.pageX;
+  targetY = event.pageY;
 });
+
+function animateCursor() {
+  currentX += (targetX - currentX) * 0.08;
+  currentY += (targetY - currentY) * 0.08;
+  cursor.style.left = currentX + "px";
+  cursor.style.top = currentY + "px";
+  requestAnimationFrame(animateCursor);
+}
+
+animateCursor();
