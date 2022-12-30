@@ -23,3 +23,9 @@ document.addEventListener('DOMContentLoaded', function() {
     window.location.reload();
   });
 });
+
+window.addEventListener("mousemove", function(event) {
+  var cursor = document.getElementById("cursor");
+  cursor.style.left = event.pageX + "px";
+  cursor.style.top = event.pageY + "px";
+});
