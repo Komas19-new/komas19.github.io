@@ -146,5 +146,16 @@ html, body {
     background-color: transparent;
   }
   
+  #container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  #bottom-right-text {
+    align-self: flex-end;
+    margin-left: auto;
+  }
+  
   
   
