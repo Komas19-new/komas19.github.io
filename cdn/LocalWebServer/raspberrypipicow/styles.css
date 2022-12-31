@@ -149,13 +149,14 @@ html, body {
   #container {
     display: flex;
     flex-direction: column;
+    position: relative;
     height: 100%;
+    width: 100%;
   }
   
   #bottom-right-text {
-    align-self: flex-end;
-    margin-left: auto;
+    position: absolute;
+    bottom: 0;
+    right: 0;
   }
-  
-  
   
