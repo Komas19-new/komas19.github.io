@@ -1,8 +1,0 @@
-@font-face {
-    font-family: myFirstFont;
-    src: url(Brown-Regular.ttf);
-}
-  
-html {
-    font-family: myFirstFont;
-}

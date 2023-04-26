@@ -11894,6 +11894,11 @@ textarea.form-control-lg {
   .pb-xxl-0 {
     padding-bottom: 0 !important;
   }
+  .banneralert {
+    padding: 10px;
+    background-color: orange;
+    color: white;
+  }
 
   .pb-xxl-1 {
     padding-bottom: 0.25rem !important;
