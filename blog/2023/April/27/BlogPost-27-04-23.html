@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<title>About</title>
-<meta content="Just a small website for my projects." property="og:description" />
+<title>Blog</title>
+<html>
+<head>
+<meta content="Site remaking" property="og:description" />
 <meta content="https://komas19.cf" property="og:url" />
 <meta content="https://cdn.discordapp.com/attachments/827177596407644221/1018202209764261908/unknown.png" property="og:image" />
 <meta content="#43B581" data-react-helmet="true" name="theme-color" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://komas19-new.github.io/BloodSMP/styles.css">
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body {
   font-family: "Lato", sans-serif;
@@ -44,6 +43,18 @@ body {
   padding: 0px 10px;
 }
 
+.post {
+  margin-left: 350px;
+  font-size: 28px;
+  padding: 0px 10px;
+}
+
+.author {
+  margin-left: 450px;
+  font-size: 28px;
+  padding: 0px 10px;
+}
+
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
@@ -63,25 +74,27 @@ body {
   </script>    
 
 <div class="sidenav">
-  <a href="index.html">Home</a>
-  <a href="games.html">Games</a>
-  <a href="blog.html">Blog</a>
-  <a href="status.html">Status</a>
-  <a href="about.html">About</a>
-  <a href="contact.html">Contact</a>
+  <a href="/index.html">Home</a>
+  <a href="/games.html">Games</a>
+  <a href="/blog.html">Blog</a>
+  <a href="/status.html">Status</a>
+  <a href="/about.html">About</a>
+  <a href="/contact.html">Contact</a>
   <button onclick="darkMode()">Dark Mode</button> 
   <button onclick="lightMode()">Light Mode</button>
+
 </div>
 </body>
 </head>
 <div class="main">
   <div class="topnav" id="NavTop">
-    <a href="index.html">Home</a>
-    <a href="games.html">Games</a>
-    <a href="blog.html">Blog</a>
-    <a href="status.html">Status</a>
-    <a class="active" href="about.html">About</a>
-    <a href="contact.html">Contact</a>
+    <a href="/index.html">Home</a>
+    <a href="/games.html">Games</a>
+    <a class="active" href="/blog.html">Blog</a>
+    <a href="/status.html">Status</a>
+    <a href="/about.html">About</a>
+    <a href="/contact.html">Contact</a>
+
     <a href="javascript:void(0);" class="icon" onclick="responsiveTopNav()">
       <i class="fa fa-bars"></i>
     </a>
@@ -92,7 +105,6 @@ body {
   <div class="banneralert" style="display: none;"> <!-- "style="display: none;" to make it invisible-->
     <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
     <strong>Maintenance!</strong> Website is going under maintenance at 5PM GMT+2
-  </div>
   <noscript><p>Please enable JavaScript in your browser for better use of the website.</p></noscript>
   <script>
       function darkMode() {
@@ -104,11 +116,42 @@ body {
        var element = document.body;
        var content = document.getElementById("DarkModetext");
        element.className = "light-mode";
-
      }
   </script>
   <body>
-  I am an dev making random stuff in roblox, discord bots, this website and even more random stuff.
+  <div class="post">
+    <p></p>
+    <strong>Site remaking!</strong>
+    April 27th of 2023
+    
+    <p>
+      <p></p>
+      Content :
+      <p></p>
+      Well it has been a long time, no?
+      <p></p>
+      You have probably seen the site being buggy during maintenance, especially with komas19.pages.dev bypassing it.
+      <p></p>
+      Update Log
+      <p></p>
+        - Remade the whole website
+        <p></p>
+        - Better maintenance screen
+        <p></p>
+        - Goodbye komas19.pages.dev 🫡, it is now redirecting to komas19.cf
+        <p></p>
+        - Cleaned up the site
+      <p></p>
+      And thats all!
+      <p></p>
+      See you next time!
+      <p></p>
+      <div class="author">
+        <p></p>
+        <strong>- Komas19 (Owner)</strong>
+      </div>
+    </p>
+  </div>
   </body>
 </div>
 </html>
