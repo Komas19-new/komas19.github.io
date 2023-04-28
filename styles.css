@@ -122,11 +122,6 @@
   pointer-events: none;
 }
 
-.dark-mode { 
-  background-color: white;
-  color: dark;
-}
-
  /* Add a black background color to the top navigation */
  .topnav {
   background-color: #333;
@@ -221,11 +216,6 @@
 .topnav .icon {
   display: none;
 } 
-
-.light-mode {
-  background-color: white;
-  color: black;
-}
 
 body {
   margin: 0;
