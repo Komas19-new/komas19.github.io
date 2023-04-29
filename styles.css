@@ -122,6 +122,29 @@
   pointer-events: none;
 }
 
+#sidebar-toggle {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+}
+
+#sidebar-toggle i {
+  display: block;
+}
+
+#sidebar.active {
+  left: 0;
+}
+
+.reason-text {
+  color: red
+}
+
  /* Add a black background color to the top navigation */
  .topnav {
   background-color: #333;
