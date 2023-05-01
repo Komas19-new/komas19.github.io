@@ -173,6 +173,7 @@
   overflow: hidden;
   display: inline-block;
   border-radius: 10px;
+  text-align: center;
 }
 
 /* Style the links inside the navigation bar */
