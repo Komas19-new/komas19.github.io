@@ -185,6 +185,10 @@
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+.topnav a:not(:last-child) {
+  margin-right: 20px;
+}
+
 .body {
   font-family: "Lato", sans-serif;
   background-color: rgb(56, 53, 53);
