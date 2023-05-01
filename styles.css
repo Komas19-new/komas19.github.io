@@ -167,10 +167,6 @@
   color: gray
 }
 
-.button {
-  border-radius: 8px;
-}
-
  /* Add a black background color to the top navigation */
  .topnav {
   background-color: #333;
@@ -204,7 +200,7 @@
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #444444;
+  background-color: #333;
   overflow-x: hidden;
   padding-top: 20px;
   display: inline-block;
