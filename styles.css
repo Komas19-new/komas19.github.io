@@ -572,6 +572,7 @@ figure {
 img,
 svg {
   vertical-align: middle;
+  border-radius: 10px;
 }
 
 table {
@@ -607,11 +608,12 @@ label {
 }
 
 button {
-  border-radius: 0;
+  border-radius: 10px;
 }
 
 button:focus:not(:focus-visible) {
   outline: 0;
+  border-radius: 10px;
 }
 
 input,
@@ -623,11 +625,13 @@ textarea {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+  border-radius: 10px;
 }
 
 button,
 select {
   text-transform: none;
+  border-radius: 10px;
 }
 
 [role=button] {
