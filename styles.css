@@ -304,30 +304,40 @@ body {
   padding: 20px;
   background-color: #f44336;
   color: white;
+  border-radius: 10px;
+  display: inline-block;
 }
 
 .alertworking {
   padding: 20px;
   background-color: #0d8f13;
   color: white;
+  border-radius: 10px;
+  display: inline-block;
 }
 
 .alertdown {
   padding: 20px;
   background-color: #ff0000;
   color: white;
+  border-radius: 10px;
+  display: inline-block;
 }
 
 .alertslow {
   padding: 20px;
   background-color: #c2d421;
   color: white;
+  border-radius: 10px;
+  display: inline-block;
 }
 
 .alertmaintenance {
   padding: 20px;
   background-color: #1100ff;
   color: white;
+  border-radius: 10px;
+  display: inline-block;
 }
 
 
