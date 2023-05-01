@@ -319,10 +319,15 @@ body {
 }
 
 
-.alertworking strong, .alertdown strong, .alertslow strong, .alertmaintenance strong {
+.alertworking strong,
+.alertdown strong,
+.alertslow strong,
+.alertmaintenance strong {
   display: inline-block;
   margin-right: 10px;
-  border-radius: 10px
+  background-color: transparent;
+  padding: 5px;
+  border-radius: 10px;
 }
 
 .alertdown {
