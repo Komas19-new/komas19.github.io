@@ -320,21 +320,6 @@ body {
 
 
 
-.alertworking:before,
-.alertdown:before,
-.alertslow:before,
-.alertmaintenance:before {
-  content: "";
-  position: absolute;
-  left: -20px;
-  top: 50%;
-  margin-top: -10px;
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-  border-right: 20px solid #0d8f13;
-  border-radius: 0 20px 20px 0;
-}
-
 .alertworking strong,
 .alertdown strong,
 .alertslow strong,
@@ -342,7 +327,28 @@ body {
   display: inline-block;
   margin-right: 10px;
   font-weight: bold;
+  width: 150px; /* adjust the width as needed */
+  text-align: right;
+  position: relative;
+  z-index: 1;
 }
+
+.alertworking strong:before,
+.alertdown strong:before,
+.alertslow strong:before,
+.alertmaintenance strong:before {
+  content: "";
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  margin-top: -10px;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid #0d8f13; /* change color as needed */
+  border-radius: 10px 0 0 10px;
+}
+
+
 .alertdown {
   padding: 20px;
   background-color: #ff0000;
