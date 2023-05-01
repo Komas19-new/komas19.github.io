@@ -278,6 +278,7 @@ br {
 .topnav a.active {
   background-color: #04AA6D;
   color: white;
+  border-radius: 10px;
 }
 
 /* Hide the link that should open and close the topnav on small screens */
