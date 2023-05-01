@@ -176,6 +176,7 @@
   background-color: #333;
   overflow: hidden;
   display: inline-block;
+  border-radius: 10px;
 }
 
 /* Style the links inside the navigation bar */
