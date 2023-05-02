@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
   var copyAlert = document.getElementById("copyalert");
 
-  function copyButton() { // For blog posts 
+  function copyBtn() { // For blog posts 
      // Select the entire blog post
       const blogPost = document.querySelector('.post');
       const range = document.createRange();
