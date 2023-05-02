@@ -260,15 +260,16 @@ br {
   padding: 0px 10px;
 }
 
-.previousblog {
+.previousblog, .nextblog {
   color: white;
   text-decoration: none;
 }
-.nextblog {
-  color: white;
-  text-decoration: none;
-  margin-left: 100%;
+
+.movingblog {
+  display: flex;
+  justify-content: space-between;
 }
+
 
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
