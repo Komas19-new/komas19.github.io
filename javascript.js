@@ -1,6 +1,7 @@
+var copyAlert;
 document.addEventListener("DOMContentLoaded", function() {
   console.log("DOMContentLoaded event fired");
-  var copyAlert = document.getElementById("copyalert");
+  copyAlert = document.getElementById("copyalert");
   console.log("copyAlert:", copyAlert);
 })
 
