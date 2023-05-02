@@ -3,9 +3,6 @@ var moveAlert;
 var comingsoonAlert;
 var prevButton;
 var nextButton;
-prevButton = document.getElementById('prev');
-nextButton = document.getElementById('next');
-
 document.addEventListener("DOMContentLoaded", function() {
   console.log("DOMContentLoaded event fired");
   copyAlert = document.getElementById("copyalert");
