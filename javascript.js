@@ -1,11 +1,14 @@
 var copyAlert;
 var moveAlert;
+var comingsoonAlert;
 document.addEventListener("DOMContentLoaded", function() {
   console.log("DOMContentLoaded event fired");
   copyAlert = document.getElementById("copyalert");
   console.log("copyAlert:", copyAlert);
   moveAlert = document.getElementById("movealert");
   console.log("moveAlert:", moveAlert);
+  comingsoonAlert = document.getElementById("comingsoonalert")
+  console.log("comingsoonAlert:", comingsoonAlert);
 })
 
   function copyBtn() { // For blog posts 
@@ -63,6 +66,25 @@ document.addEventListener("DOMContentLoaded", function() {
        }, 5000);
        console.log("we're done");
      }
+
+     function comingSoonAlertt() { // For blog posts moving
+      comingsoonAlert.style.opacity = 1;
+      console.log("opacity 1");
+      comingsoonAlert.style.visibility = "visible";
+      console.log("visible");
+      setTimeout(function() {
+        comingsoonAlert.style.opacity = 0;
+        console.log("opacity 0");
+        comingsoonAlert.style.transition = "opacity 1s ease-out";
+        console.log("transition");
+        setTimeout(function() {
+          comingsoonAlert.style.visibility = "hidden";
+          console.log("gone....");
+          comingsoonAlert.style.transition = "none";
+        }, 1000);
+      }, 5000);
+      console.log("we're done");
+    }
 
   function responsiveTopNav() { // For the Top Bar
       var x = document.getElementById("NavTop");

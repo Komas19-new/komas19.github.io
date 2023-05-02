@@ -209,6 +209,27 @@
 
 .game {
   padding: 6px 8px 6px 16px;
+  flex-basis: calc(33.33% - 16px);
+  margin-bottom: 16px;
+}
+
+.game-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.game:not(:first-of-type) {
+  display: none;
+}
+.game-selection {
+  font-size: 24px;
+  margin: 8px;
+  padding: 8px;
+  border: none;
+  background-color: #43B581;
+  color: white;
+  cursor: pointer;
 }
 
 .sidenav a {
