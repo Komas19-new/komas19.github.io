@@ -95,3 +95,35 @@ document.addEventListener("DOMContentLoaded", function() {
         x.className = "topnav";
       }
     }
+
+const games = document.querySelectorAll('.game');
+let currentGameIndex = 0;
+
+const prevButton = document.getElementById('prev');
+const nextButton = document.getElementById('next');
+
+prevButton.addEventListener('click', () => {
+  if (currentGameIndex > 0) {
+    currentGameIndex--;
+    updateDisplayedGame();
+  }
+});
+
+nextButton.addEventListener('click', () => {
+  if (currentGameIndex < games.length - 1) {
+    currentGameIndex++;
+    updateDisplayedGame();
+  }
+});
+
+function updateDisplayedGame() {
+  games.forEach((game, index) => {
+    if (index === currentGameIndex) {
+      game.style.display = 'block';
+    } else {
+      game.style.display = 'none';
+    }
+  });
+}
+
+updateDisplayedGame();
