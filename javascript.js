@@ -1,4 +1,3 @@
-document.addEventListener("DOMContentLoaded", function() {
   var copyAlert = document.getElementById("copyalert");
 
   function copyBtn() { // For blog posts 
@@ -41,4 +40,3 @@ document.addEventListener("DOMContentLoaded", function() {
         x.className = "topnav";
       }
     }
-  })
