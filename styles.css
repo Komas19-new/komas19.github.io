@@ -264,6 +264,11 @@ br {
   color: white;
   text-decoration: none;
 }
+.nextblog {
+  color: white;
+  text-decoration: none;
+  margin-left: 100%;
+}
 
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
