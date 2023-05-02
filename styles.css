@@ -323,7 +323,7 @@ br {
   display: inline-block;
 }
 
-.copy-alert {
+.copy-alert, .move-alert, .coming-soon-alert {
   background-color: rgb(71, 71, 71);
   color: white;
   border-radius: 10px;
@@ -338,25 +338,6 @@ br {
   transition: opacity 0.5s;
   z-index: 999;
 }
-
-.move-alert {
-  background-color: rgb(71, 71, 71);
-  color: white;
-  border-radius: 10px;
-  display: inline-block;
-  position: fixed;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 10px;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.5s;
-  z-index: 999;
-}
-
-
-
 
 body {
   margin: 0;
