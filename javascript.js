@@ -1,4 +1,8 @@
+document.addEventListener("DOMContentLoaded", function() {
+  console.log("DOMContentLoaded event fired");
   var copyAlert = document.getElementById("copyalert");
+  console.log("copyAlert:", copyAlert);
+})
 
   function copyBtn() { // For blog posts 
      // Select the entire blog post
