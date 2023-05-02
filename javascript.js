@@ -1,6 +1,7 @@
 var copyAlert;
 var moveAlert;
 var comingsoonAlert;
+
 document.addEventListener("DOMContentLoaded", function() {
   console.log("DOMContentLoaded event fired");
   copyAlert = document.getElementById("copyalert");
@@ -67,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function() {
        console.log("we're done");
      }
 
-     function comingSoonAlertt() { // For blog posts moving
+     function comingSoonAlertt() { // For coming soon games
       comingsoonAlert.style.opacity = 1;
       console.log("opacity 1");
       comingsoonAlert.style.visibility = "visible";
