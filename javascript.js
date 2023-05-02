@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function() {
         console.log("opacity 0");
         copyAlert.style.visibility = "hidden";
         console.log("hidden");
-      }, 500);
+      }, 3000);
       console.log("we're done");
     }
 
