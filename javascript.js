@@ -31,9 +31,14 @@ document.addEventListener("DOMContentLoaded", function() {
       setTimeout(function() {
         copyAlert.style.opacity = 0;
         console.log("opacity 0");
-        copyAlert.style.visibility = "hidden";
-        console.log("hidden");
-      }, 3000);
+        copyAlert.style.transition = "opacity 1s ease-out";
+        console.log("transition");
+        setTimeout(function() {
+          copyAlert.style.visibility = "hidden";
+          console.log("gone....");
+          copyAlert.style.transition = "none";
+        }, 1000);
+      }, 5000);
       console.log("we're done");
     }
 
