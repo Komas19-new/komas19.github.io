@@ -36,15 +36,12 @@ document.addEventListener("DOMContentLoaded", function() {
   function updateDisplayedGame() {
     games.forEach((game, index) => {
       if (index === currentGameIndex) {
-        game.style.opacity = 1;
-        game.style.transform = 'translateX(0%)';
+        game.style.display = 'block';
       } else {
-        game.style.opacity = 0;
-        game.style.transform = `translateX(${index < currentGameIndex ? '-' : ''}100%)`;
+        game.style.display = 'none';
       }
     });
   }
-  
 
   updateDisplayedGame();
 })
