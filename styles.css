@@ -284,6 +284,25 @@ br {
   display: none;
 } 
 
+.copy-btn {
+  background-color: rgb(71, 71, 71);
+  color: white;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+.copy-alert {
+  background-color: rgb(71, 71, 71);
+  color: white;
+  border-radius: 10px;
+  display: inline-block;
+  padding: 10px;
+  border: 2px solid white;
+  text-align: center;
+  margin: 0 auto;
+}
+
+
 body {
   margin: 0;
   font-family: var(--bs-body-font-family);
