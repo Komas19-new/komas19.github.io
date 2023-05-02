@@ -1,4 +1,5 @@
-var copyAlert = document.getElementById("copyalert");
+document.addEventListener("DOMContentLoaded", function() {
+  var copyAlert = document.getElementById("copyalert");
 
 function copyButton() { // For blog posts 
     // Select the entire blog post
@@ -31,4 +32,4 @@ function responsiveTopNav() { // For the Top Bar
       x.className = "topnav";
     }
   }
-  
+})
