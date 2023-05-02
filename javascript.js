@@ -1,6 +1,10 @@
 var copyAlert;
 var moveAlert;
 var comingsoonAlert;
+var prevButton;
+var nextButton;
+prevButton = document.getElementById('prev');
+nextButton = document.getElementById('next');
 
 document.addEventListener("DOMContentLoaded", function() {
   console.log("DOMContentLoaded event fired");
@@ -10,6 +14,10 @@ document.addEventListener("DOMContentLoaded", function() {
   console.log("moveAlert:", moveAlert);
   comingsoonAlert = document.getElementById("comingsoonalert")
   console.log("comingsoonAlert:", comingsoonAlert);
+  prevButton = document.getElementById('prev');
+  console.log("prevButton:", prevButton);
+  nextButton = document.getElementById('next');
+  console.log("nextButton:", nextButton);
 })
 
   function copyBtn() { // For blog posts 
@@ -98,9 +106,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 const games = document.querySelectorAll('.game');
 let currentGameIndex = 0;
-
-const prevButton = document.getElementById('prev');
-const nextButton = document.getElementById('next');
 
 prevButton.addEventListener('click', () => {
   if (currentGameIndex > 0) {
