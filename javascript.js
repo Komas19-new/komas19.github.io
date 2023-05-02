@@ -17,34 +17,33 @@ document.addEventListener("DOMContentLoaded", function() {
   console.log("nextButton:", nextButton);
 
   const games = document.querySelectorAll('.game');
-let currentGameIndex = 0;
+  let currentGameIndex = 0;
 
-prevButton.addEventListener('click', () => {
-  if (currentGameIndex > 0) {
-    currentGameIndex--;
-    updateDisplayedGame();
-  }
-});
-
-nextButton.addEventListener('click', () => {
-  if (currentGameIndex < games.length - 1) {
-    currentGameIndex++;
-    updateDisplayedGame();
-  }
-});
-
-function updateDisplayedGame() {
-  games.forEach((game, index) => {
-    if (index === currentGameIndex) {
-      game.style.display = 'block';
-    } else {
-      game.style.display = 'none';
+  prevButton.addEventListener('click', () => {
+    if (currentGameIndex > 0) {
+      currentGameIndex--;
+      updateDisplayedGame();
     }
   });
-}
 
-updateDisplayedGame();
+  nextButton.addEventListener('click', () => {
+    if (currentGameIndex < games.length - 1) {
+      currentGameIndex++;
+      updateDisplayedGame();
+    }
+  });
 
+  function updateDisplayedGame() {
+    games.forEach((game, index) => {
+      if (index === currentGameIndex) {
+        game.style.display = 'block';
+      } else {
+        game.style.display = 'none';
+      }
+    });
+  }
+
+  updateDisplayedGame();
 })
 
   function copyBtn() { // For blog posts 
