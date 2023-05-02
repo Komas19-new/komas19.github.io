@@ -35,7 +35,10 @@
   <noscript><br>Please enable JavaScript in your browser for better use of the website.</noscript>
   <body>
   <div class="post">
-    <a class="previousblog" href="/blog/2022/September/11/BlogPost-11-09-22.html"><i class="fa-solid fa-arrow-left"></i> <strong>Previous Blog</strong></a>
+    <div class="movingblog">
+      <a class="previousblog" href="/blog/2022/September/11/BlogPost-11-09-22.html"><i class="fa-solid fa-arrow-left"></i> <strong>Previous Blog</strong></a>
+      <a class="nextblog" href="#" onclick="moveBtns()"><strong>Next Blog</strong> <i class="fa-solid fa-arrow-right"></i></a>
+    </div> <strong>Previous Blog</strong></a>
     <br><strong>Site remaking!</strong>
     May 4th of 2023
     <br>
@@ -58,6 +61,10 @@
 
   <div class="copy-alert" id="copyalert">
     Copied to clipboard <i class="fa-solid fa-clipboard-list"></i> successfully!
+  </div> 
+  
+  <div class="move-alert" id="movealert">
+    No previous/next blog!
   </div>  
   </body>
 </div>

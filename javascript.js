@@ -1,8 +1,11 @@
 var copyAlert;
+var moveAlert;
 document.addEventListener("DOMContentLoaded", function() {
   console.log("DOMContentLoaded event fired");
   copyAlert = document.getElementById("copyalert");
   console.log("copyAlert:", copyAlert);
+  moveAlert = document.getElementById("movealert");
+  console.log("moveAlert:", moveAlert);
 })
 
   function copyBtn() { // For blog posts 
@@ -41,6 +44,25 @@ document.addEventListener("DOMContentLoaded", function() {
       }, 5000);
       console.log("we're done");
     }
+
+    function moveBtns() { // For blog posts moving
+       moveAlert.style.opacity = 1;
+       console.log("opacity 1");
+       moveAlert.style.visibility = "visible";
+       console.log("visible");
+       setTimeout(function() {
+         moveAlert.style.opacity = 0;
+         console.log("opacity 0");
+         moveAlert.style.transition = "opacity 1s ease-out";
+         console.log("transition");
+         setTimeout(function() {
+           moveAlert.style.visibility = "hidden";
+           console.log("gone....");
+           moveAlert.style.transition = "none";
+         }, 1000);
+       }, 5000);
+       console.log("we're done");
+     }
 
   function responsiveTopNav() { // For the Top Bar
       var x = document.getElementById("NavTop");
