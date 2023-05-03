@@ -8,8 +8,7 @@ var moveAlert;
 var comingsoonAlert;
 var prevButton;
 var nextButton;
-const games = document.querySelectorAll('.game');
-let currentGameIndex = 0;
+var games;
 
 document.addEventListener("DOMContentLoaded", function() {
   console.log("DOMContentLoaded event fired");
@@ -24,6 +23,8 @@ document.addEventListener("DOMContentLoaded", function() {
   nextButton = document.getElementById('next');
   console.log("nextButton:", nextButton);
 
+  games = document.querySelectorAll('.game');
+  let currentGameIndex = 0;
   prevButton.addEventListener('click', () => {
     if (currentGameIndex > 0) {
       currentGameIndex--;
