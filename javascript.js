@@ -16,9 +16,6 @@ document.addEventListener("DOMContentLoaded", function() {
   nextButton = document.getElementById('next');
   console.log("nextButton:", nextButton);
 
-  const games = document.querySelectorAll('.game');
-  let currentGameIndex = 0;
-
   prevButton.addEventListener('click', () => {
     if (currentGameIndex > 0) {
       currentGameIndex--;
@@ -32,19 +29,20 @@ document.addEventListener("DOMContentLoaded", function() {
       updateDisplayedGame();
     }
   });
+});
 
-  function updateDisplayedGame() {
-    games.forEach((game, index) => {
-      if (index === currentGameIndex) {
-        game.style.display = 'block';
-      } else {
-        game.style.display = 'none';
-      }
-    });
-  }
+function updateDisplayedGame() {
+  games.forEach((game, index) => {
+    if (index === currentGameIndex) {
+      game.style.display = 'block';
+    } else {
+      game.style.display = 'none';
+    }
+  });
+}
 
-  updateDisplayedGame();
-})
+updateDisplayedGame();
+
 
   function copyBtn() { // For blog posts 
      // Select the entire blog post
