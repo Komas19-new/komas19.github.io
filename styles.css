@@ -222,6 +222,7 @@
 .game:not(:first-of-type) {
   display: none;
 }
+*/
 .game-selection {
   font-size: 24px;
   margin: 8px;
@@ -230,8 +231,8 @@
   background-color: #43B581;
   color: white;
   cursor: pointer;
+  visibility: hidden;
 }
-*/
 .sidenav a {
   padding: 6px 8px 6px 16px;
   text-decoration: none;
