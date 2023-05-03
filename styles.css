@@ -209,8 +209,6 @@
 
 .game {
   padding: 6px 8px 6px 16px;
-  flex-basis: calc(33.33% - 16px);
-  margin-bottom: 16px;
 }
 
 .sidenav a {
