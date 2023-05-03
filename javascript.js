@@ -3,11 +3,6 @@ var moveAlert;
 var comingsoonAlert;
 var prevButton;
 var nextButton;
-var copyAlert;
-var moveAlert;
-var comingsoonAlert;
-var prevButton;
-var nextButton;
 var games;
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -38,6 +33,8 @@ document.addEventListener("DOMContentLoaded", function() {
       updateDisplayedGame();
     }
   });
+
+  updateDisplayedGame();
 });
 
 function updateDisplayedGame() {
@@ -49,9 +46,6 @@ function updateDisplayedGame() {
     }
   });
 }
-
-updateDisplayedGame();
-
 
   function copyBtn() { // For blog posts 
      // Select the entire blog post
