@@ -18,7 +18,6 @@ document.addEventListener("DOMContentLoaded", function() {
   console.log("prevButton:", prevButton);
   nextButton = document.getElementById('next');
   console.log("nextButton:", nextButton);
-
   games = document.querySelectorAll('.game');
   prevButton.addEventListener('click', () => {
     if (currentGameIndex > 0) {
@@ -36,6 +35,16 @@ document.addEventListener("DOMContentLoaded", function() {
 
   updateDisplayedGame();
 });
+
+function updateDisplayedGame() {
+  games.forEach((game, index) => {
+    if (index === currentGameIndex) {
+      game.style.display = 'block';
+    } else {
+      game.style.display = 'none';
+    }
+  });
+}
 
 function updateDisplayedGame() {
   games.forEach((game, index) => {
