@@ -1,8 +1,10 @@
 var copyAlert;
 var moveAlert;
 var comingsoonAlert;
+/*
 var prevButton;
 var nextButton;
+*/
 document.addEventListener("DOMContentLoaded", function() {
   console.log("DOMContentLoaded event fired");
   copyAlert = document.getElementById("copyalert");
@@ -11,6 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
   console.log("moveAlert:", moveAlert);
   comingsoonAlert = document.getElementById("comingsoonalert")
   console.log("comingsoonAlert:", comingsoonAlert);
+/*
   prevButton = document.getElementById('prev');
   console.log("prevButton:", prevButton);
   nextButton = document.getElementById('next');
@@ -44,6 +47,7 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   updateDisplayedGame();
+*/
 })
 
   function copyBtn() { // For blog posts 
