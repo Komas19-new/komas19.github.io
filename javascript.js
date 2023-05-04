@@ -50,6 +50,10 @@ document.addEventListener("DOMContentLoaded", function() {
 */
 })
 
+  function redirectToVideo(videoId) {
+    window.location.href = `https://komas19.cf/view?${videoId}`;
+  }
+
   function copyBtn() { // For blog posts 
      // Select the entire blog post
       const blogPost = document.querySelector('.post');

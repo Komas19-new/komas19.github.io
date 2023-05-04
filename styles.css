@@ -209,8 +209,10 @@
 
 .game {
   padding: 6px 8px 6px 16px;
-  /*flex-basis: calc(33.33% - 16px);
-  margin-bottom: 16px;*/
+  /*
+  flex-basis: calc(33.33% - 16px);
+  margin-bottom: 16px;
+  */
 }
 /*
 .game-container {
@@ -233,6 +235,19 @@
   cursor: pointer;
   visibility: hidden;
 }
+
+/* Center the video container */
+.video-container {
+  display: flex;
+  justify-content: center;
+}
+      
+/* Set the size of the video thumbnail */
+.video-thumbnail {
+  width: 480px;
+  height: 270px;
+}
+
 .sidenav a {
   padding: 6px 8px 6px 16px;
   text-decoration: none;
