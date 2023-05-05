@@ -50,6 +50,8 @@ document.addEventListener("DOMContentLoaded", function() {
 */
 })
 
+  
+
   function copyBtn() { // For blog posts 
      // Select the entire blog post
       const blogPost = document.querySelector('.post');
