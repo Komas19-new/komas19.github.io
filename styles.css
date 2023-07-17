@@ -189,7 +189,7 @@
   width: auto;
 }
 
-.body {
+.body, p-5 text-center bg-light {
   font-family: "Lato", sans-serif;
   background-color: rgb(56, 53, 53);
 }
