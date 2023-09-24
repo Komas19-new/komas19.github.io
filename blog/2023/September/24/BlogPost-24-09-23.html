@@ -1,1 +1,75 @@
+<!DOCTYPE html>
+<head>
+  <title>Blog</title>
+<meta content="About the outage" property="og:description" />
+<meta content="https://komas19.pages.dev" property="og:url" />
+<meta content="https://cdn.discordapp.com/attachments/827177596407644221/1018202209764261908/unknown.png" property="og:image" />
+<meta content="#43B581" data-react-helmet="true" name="theme-color" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://komas19.pages.dev/styles.css?v=2">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+<script src="https://komas19.pages.dev/javascript.js"></script>
+</head>
+<div class="sidenav">
+  <a href="/index.html"><i class="fa-solid fa-house"></i> Home</a>
+  <a href="/games.html"><i class="fa-solid fa-gamepad"></i> Games</a>
+  <a href="/blog.html"><i class="fa-solid fa-book"></i> Blog</a>
+  <a href="/status.html"><i class="fa-solid fa-signal"></i> Status</a>
+  <a href="/about.html"><i class="fa-solid fa-circle-info"></i> About</a>
+  <a href="/contact.html"><i class="fa-solid fa-address-book"></i> Contact</a>
+  <a href="/videos.html"><i class="fa-brands fa-youtube"></i> Videos</a>
+  <a href="/compact10.html"><i class="fa-brands fa-windows"></i> Compact 10</a>
+  <a href="#" onclick="copyBtn()"><i class="fa-solid fa-clipboard-list"></i> Copy Blog</a>
 
+</div>
+<div class="main">
+  <div class="topnav" id="NavTop">
+    <a href="/index.html"><i class="fa-solid fa-house"></i></a>
+    <a href="/games.html"><i class="fa-solid fa-gamepad"></i></a>
+    <a class="active" href="/blog.html"><i class="fa-solid fa-book"></i></a>
+    <a href="/status.html"><i class="fa-solid fa-signal"></i></a>
+    <a href="/about.html"><i class="fa-solid fa-circle-info"></i></a>
+    <a href="/contact.html"><i class="fa-solid fa-address-book"></i></a>
+    <a href="/videos.html"><i class="fa-brands fa-youtube"></i></a>
+    <a href="/compact10.html"><i class="fa-brands fa-windows"></i></a>
+    <a href="javascript:void(0);" class="icon" onclick="responsiveTopNav()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+  <noscript><br>Please enable JavaScript in your browser for better use of the website.</noscript>
+  <body>
+  <div class="post">
+    <div class="movingblog">
+      <a class="previousblog" href="/blog/2022/September/11/BlogPost-11-09-22.html"><i class="fa-solid fa-arrow-left"></i> <strong>Previous Blog</strong></a>
+      <a class="nextblog" href="#" onclick="moveBtns()"><strong>Next Blog</strong> <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+    <br><strong>About the outage</strong>
+    September 24th of 2023
+    <br>
+      <br>Well it has been a long time, again no?
+      <br>The website has been down for a few months, we have fixed it, lets talk about the outage now
+      <br>
+      <ol>
+        <li>What Happened? A few months ago, the website went fully offline, with no domains working</li>
+        <li>Why did this happend? <a href="https://komas19.pages.dev">https://komas19.pages.dev</a> used to redirect to <a href="https://komas19.cf">https://komas19.cf</a> and that domain, expired, and the provider we used, is gone for some time</li>
+        <li>How was this fixed? We simply removed the way that it redirects to <a href="https://komas19.cf">https://komas19.cf</a></li>
+        <li>What would you recommend to other people owning a site? First off, check regularly, every week for example, if the website is working. Secondly, do not make it redirect to a custom domain, keep the old domain just in case the issue we had happens to you, and for any pages, make it get the styles.css for example, by the old domain</li>
+      </ol>
+      <br>And thats all!
+      <br>See you next time!
+      <div class="author">
+        <br><strong>- Komas19 (Owner)</strong>
+      </div>
+    
+  </div>
+
+  <div class="copy-alert" id="copyalert">
+    Copied to clipboard <i class="fa-solid fa-clipboard-list"></i> successfully!
+  </div> 
+  
+  <div class="move-alert" id="movealert">
+    No previous/next blog!
+  </div>  
+  </body>
+</div>
+</html>
