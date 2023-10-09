@@ -1,3 +1,4 @@
+
 // Set the interval (in milliseconds)
 const intervalInMilliseconds = 60000; // 60,000 milliseconds = 1 minute
 
