@@ -11,6 +11,12 @@ body.darkmode{
 	background-color:#000;
 	color:#fff;
 }
+.nextblog{
+	color:#fff
+}
+.previousblog{
+	color:#fff
+}
 
 header .darkmode{
 	position:absolute;
