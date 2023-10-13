@@ -38,7 +38,7 @@ function darkmode_init()
 		
 		if(document.body.classList.contains('darkmode'))
 		{
-			darkmodeCookie.set('darkmode','true',2628000000,'/',false);
+			darkmodeCookie.set('darkmode','true',34560000000,'/',false);
 		}
 		else
 		{
