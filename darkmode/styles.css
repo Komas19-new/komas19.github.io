@@ -2,7 +2,7 @@
 	box-sizing: border-box;
 }
 
-body, .nextblog, .previousblog{
+body{
 	font-family:sans-serif;
 	background-color:#fff;
 	color:#000;
