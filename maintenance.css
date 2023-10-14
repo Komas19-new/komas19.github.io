@@ -303,8 +303,13 @@ br {
   padding: 0px 10px;
 }
 
-.previousblog, .nextblog, .videos-title {
-  color: black;
+.nextblog, .previousblog {
+  color:white;
+  background-color: black;
+}
+
+.videos-title {
+  color: white;
   text-decoration: none;
 }
 
