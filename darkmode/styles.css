@@ -2,18 +2,14 @@
 	box-sizing: border-box;
 }
 
-body{
+body, .nextblog, .previousblog{
 	font-family:sans-serif;
 	background-color:#fff;
 	color:#000;
 }
-body.darkmode{
+body.darkmode, .nextblog, .previousblog{
 	background-color:#000;
 	color:#fff;
-}
-
-.nextblog, .previousblog {
-	color:white;
 }
 
 header .darkmode{
