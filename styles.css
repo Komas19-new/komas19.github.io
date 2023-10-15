@@ -510,6 +510,10 @@ p {
   margin-bottom: 1rem;
 }
 
+.nextblog, .previousblog {
+  color: black;
+}
+
 abbr[title] {
   -webkit-text-decoration: underline dotted;
   text-decoration: underline dotted;
