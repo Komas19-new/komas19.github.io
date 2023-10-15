@@ -301,11 +301,6 @@ br {
   font-size: 28px; /* Increased text to enable scrolling */
   padding: 0px 10px;
 }
-
-.nextblog, .previousblog{
-  color:black;
-}
-
 .videos-title {
   color: white;
   text-decoration: none;
@@ -314,6 +309,12 @@ br {
 .movingblog {
   display: flex;
   justify-content: space-between;
+}
+
+#gamecheckbox {
+  margin-left: 12px;
+  margin-top: 21px;
+  transform: scale(2.4);
 }
 
 

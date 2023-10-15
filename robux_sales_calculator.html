@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<title>Robux Sales Calculator</title>
+<meta content="Just a small website for my projects." property="og:description" />
+<meta content="https://komas19.cf" property="og:url" />
+<meta content="https://komas19.pages.dev" property="og:url" />
+<meta content="https://cdn.discordapp.com/attachments/827177596407644221/1018202209764261908/unknown.png" property="og:image" />
+<meta content="#43B581" data-react-helmet="true" name="theme-color" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://komas19.pages.dev/styles.css?v=2">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+<script src="https://komas19.pages.dev/javascript.js"></script>
+<link rel="stylesheet" href="darkmode/styles.css">
+<script src="darkmode/darkmode.js" defer></script>
+<script src="darkmode/project.js" defer></script>
+<body> 
+<div class="sidenav">
+  <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+  <a href="games.html"><i class="fa-solid fa-gamepad"></i> Games</a>
+  <a href="blog.html"><i class="fa-solid fa-book"></i> Blog</a>
+  <a href="status.html"><i class="fa-solid fa-signal"></i> Status</a>
+  <a href="about.html"><i class="fa-solid fa-circle-info"></i> About</a>
+  <a href="contact.html"><i class="fa-solid fa-address-book"></i> Contact</a>
+  <a href="videos.html"><i class="fa-brands fa-youtube"></i> Videos</a>
+  <a href="compact10.html"><i class="fa-brands fa-windows"></i> Compact 10</a>
+  <a href="robux_sales_calculator.html"><img src="cdn/robux.png" width="26" height="26"> Robux Sales Calculator</a>
+</div>
+</body>
+<div class="main">
+    <body>
+    <!--<div class="connection-container">-->
+        <!-- The status box will be created dynamically using JavaScript -->
+    <!--</div>-->
+    <!--<script src="connection.js"></script>-->
+      <div class="topnav" id="NavTop">
+        <a href="index.html"><i class="fa-solid fa-house"></i></a>
+        <a href="games.html"><i class="fa-solid fa-gamepad"></i></a>
+        <a href="blog.html"><i class="fa-solid fa-book"></i></a>
+        <a href="status.html"><i class="fa-solid fa-signal"></i></a>
+        <a href="about.html"><i class="fa-solid fa-circle-info"></i></a>
+        <a href="contact.html"><i class="fa-solid fa-address-book"></i></a>
+        <a href="videos.html"><i class="fa-brands fa-youtube"></i></a>
+        <a href="compact10.html"><i class="fa-brands fa-windows"></i></a>
+        <a class="active" href="robux_sales_calculator.html"><img src="cdn/robux.png" width="26" height="26"></a>
+        <a href="javascript:void(0);" class="icon" onclick="responsiveTopNav()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+      <br> 
+      <noscript><br>Please enable JavaScript in your browser for better use of the website.</noscript>
+      <header>
+        <button class="darkmode" title="darkmode switch" aria-hidden="true"></button>
+    </header>
+    <main></main>
+    <footer></footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+
+            // Get references to the elements
+            const robuxInput = document.getElementById("robux");
+            const totalElement = document.getElementById("total");
+            const getTotalButton = document.getElementById("gettotal");
+            const gameCheckbox = document.getElementById("gamecheckbox");
+            const robloxTakesElement = document.getElementById("robloxtakes");
+            const gameTakesElement = document.getElementById("gametakes");
+            function createRobuxImage() {
+                const robux = document.createElement("img");
+                robux.src = "cdn/robux.png";
+                robux.width = 26;
+                robux.height = 26;
+                return robux;
+            }
+
+            function roundDown(number) {
+                return Math.floor(number);
+            }
+
+            // Function to update the total when the button is pressed
+            function updateTotal() {
+                const robuxValue = robuxInput.value;
+                if (robuxValue !== "") {
+                    const robuxNumber = parseFloat(robuxValue);
+                    if (!isNaN(robuxNumber)) {
+                        let deductionPercentage = gameCheckbox.checked ? 0.4 : 0.3; // 40% or 30% deduction
+                        let total = robuxNumber - deductionPercentage * robuxNumber;
+                        totalElement.textContent = "You get " + roundDown(total)
+                        totalElement.appendChild(createRobuxImage());
+
+                        const robloxtakesValue = 0.3 * robuxNumber;
+                        robloxTakesElement.textContent = "Roblox takes " + roundDown(robloxtakesValue)
+                        robloxTakesElement.appendChild(createRobuxImage());
+                        if (gameCheckbox.checked) {
+                            const gametakesValue = 0.1 * robuxNumber;
+                            gameTakesElement.textContent = "Game owner takes " + roundDown(gametakesValue)
+                            gameTakesElement.appendChild(createRobuxImage());
+                        } else {
+                            gameTakesElement.textContent = ""
+                        }
+                    }
+                }
+            }
+
+            // Add a click event listener to the button
+            getTotalButton.addEventListener("click", updateTotal);
+        });
+    </script>
+    <h1>Robux Sales Calculator</h1>
+
+    The amount of Robux: <input type="number" id="robux" name="robux"><br>
+    
+    Is it bought from a game? <input type="checkbox" id="gamecheckbox" name="game"><br>
+    
+    <p id="total">Please fill out the rest to get the Robux amount</p> 
+    <p id="robloxtakes"></p>
+    <p id="gametakes"></p>
+    
+    <button type="button" id="gettotal" name="gettotal">Calculate</button><br>
+
+    Please note that if its 1 <img src="cdn/robux.png" width="26" height="26">, Roblox will take it
+    </body>
+  </div>
+</div>
+</html>
