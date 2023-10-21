@@ -3,7 +3,7 @@ function darkmode_init()
 	let darkmodeSwitch = document.querySelector('header .darkmode');
 	
 	let darkmodeCookie = {
-		set:function(key,value,time,path,secure=false)
+		set:function(key,value,time,path,secure=true)
 		{
 			let expires = new Date();
 			expires.setTime(expires.getTime() + time);
@@ -38,7 +38,7 @@ function darkmode_init()
 		
 		if(document.body.classList.contains('darkmode'))
 		{
-			darkmodeCookie.set('darkmode','true',2628000000,'/',false);
+			darkmodeCookie.set('darkmode','true',2628000000,'/',true);
 		}
 		else
 		{
@@ -46,3 +46,4 @@ function darkmode_init()
 		}
 	});
 }
+
