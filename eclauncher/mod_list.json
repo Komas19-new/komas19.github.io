@@ -11,12 +11,6 @@
             "downloadURL": "https://www.komas19.xyz/eclauncher/mods/OptiFine_1.8.9_HD_U_M5.jar",
             "sha1": "D362D58A28F5373B141B9E426E8E160638BFAFCD",
             "size": 2585014
-        },
-        {
-            "name": "eclaunchermod-1.0.jar",
-            "downloadURL": "https://www.komas19.xyz/eclauncher/mods/eclaunchermod-1.0.jar",
-            "sha1": "6B1862C5307FB735FD790E372A74DEC05ECE1869",
-            "size": 94542
         }
     ]
 }
