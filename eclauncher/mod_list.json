@@ -7,6 +7,10 @@
     ],
     "mods": [
         {
+            "name": "OptiFine_1.19.2_HD_U_I2.jar",
+            "downloadURL": "https://www.komas19.xyz/eclauncher/mods/OptiFine_1.19.2_HD_U_I2.jar",
+            "sha1": "708C1ECC148A0BD7D341E8F5E005E670903650F7",
+            "size": 6924339
         }
     ]
 }
