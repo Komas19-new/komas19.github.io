@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Countdown Timer</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    .countdown-container {
+      margin-top: 50px;
+    }
+    .countdown {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Countdown Timer</h1>
+  
+  <div class="countdown-container">
+    <h2>End of official online servers:</h2>
+    <div class="countdown" id="countdown1"></div>
+    <h2>Want to use online servers after official ones are gone? Check out <a href="https://pretendo.network">Pretendo</a></h2>
+  </div>
+
+  <div class="countdown-container">
+    <h2>End of transfering funds to Nintendo Switch:</h2>
+    <div class="countdown" id="countdown2"></div>
+  </div>
+
+  <script>
+    // Countdown for April 8, 2024, 4:00 PM PDT
+    const countDownDate1 = new Date("April 8, 2024 16:00:00 PDT").getTime();
+
+    // Countdown for March 11, 2024, 10:00 PM Pacific Time
+    const countDownDate2 = new Date("March 11, 2024 22:00:00 GMT-0700").getTime();
+
+    function updateCountdown(countDownDate, countdownElement, message) {
+      const x = setInterval(function() {
+        const now = new Date().getTime();
+        const distance = countDownDate - now;
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        if (distance > 0) {
+          countdownElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+        } else {
+          clearInterval(x);
+          countdownElement.innerHTML = message;
+        }
+      }, 1000);
+    }
+
+    updateCountdown(countDownDate1, document.getElementById("countdown1"), "REST IN PEACE OFFICIAL ONLINE SERVERS, IT'S TIME TO SWITCH TO PRETENDO.");
+    updateCountdown(countDownDate2, document.getElementById("countdown2"), "YOU CAN NO LONGER TRANSFER FUNDS TO NINTENDO SWITCH.");
+  </script>
+</body>
+</html>
