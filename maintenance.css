@@ -308,11 +308,6 @@ br {
   background-color: black;
 }
 
-.videos-title {
-  color: white;
-  text-decoration: none;
-}
-
 .movingblog {
   display: flex;
   justify-content: space-between;
