@@ -5,66 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Crash 3DS Browser</title>
   <style>
-    .box {
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    /* Apply a heavy CSS animation to slow down the browser */
+    @keyframes spin {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
     }
-    .content {
-      width: 100px;
-      height: 100px;
+    .spinner {
+      display: inline-block;
+      width: 10000px; /* Make it very large */
+      height: 10000px; /* Make it very large */
+      background-color: red;
+      animation: spin 20s linear infinite; /* Apply the heavy animation */
     }
   </style>
 </head>
 <body>
-  <div class="box">
-    <div class="content">
-      <!-- Repeat this div multiple times -->
-      <div class="content"></div>
-      <div class="content"></div>
-      <div class="content"></div>
-      <div class="content"></div>
-      <div class="content"></div>
-      <div class="content"></div>
-      <div class="content"></div>
-      <div class="content"></div>
-      <div class="content"></div>
-      <div class="content"></div>
-      <div class="content"></div>
-      <div class="content"></div>
-      <div class="content"></div>
-      <div class="content"></div>
-      <div class="content"></div>
-      <div class="content"></div>
-      <div class="content"></div>
-      <div class="content"></div>
-      <div class="content"></div>
-      <div class="content"></div>
-      <div class="content"></div>
-      <div class="content"></div>
-      <div class="content"></div>
-      <div class="content"></div>
-      <div class="content"></div>
-      <div class="content"></div>
-      <div class="content"></div>
-      <div class="content"></div>
-      <div class="content"></div>
-      <div class="content"></div>
-      <div class="content"></div>
-      <div class="content"></div>
-      <div class="content"></div>
-      <div class="content"></div>
-      <div class="content"></div>
-      <div class="content"></div>
-      <div class="content"></div>
-      <div class="content"></div>
-      <div class="content"></div>
-      <div class="content"></div>
-      <!-- Repeat above block multiple times -->
-    </div>
-  </div>
+  <div class="spinner"></div>
 </body>
 </html>
