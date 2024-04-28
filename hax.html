@@ -10,26 +10,17 @@
   }
 </style>
 </head>
-<body onload="selectFile()">
+<body>
 <h1>Nintendo 3DS Exploit</h1>
 <p>This exploit will attempt to display the contents of the SD card on your Nintendo 3DS.</p>
-<form id="fileForm">
-  <input type="file" id="fileInput" style=";" />
-</form>
+<input type="file" id="fileInput" />
+<button onclick="displaySDContents()">Display SD Contents</button>
 <pre id="fileContents"></pre>
 <script>
-  // Function to open file dialog
-  function selectFile() {
-    var fileInput = document.getElementById('fileInput');
-    fileInput.onchange = function() {
-      var file = fileInput.files[0];
-      displaySDContents(file);
-    };
-    fileInput.click();
-  }
-
   // Function to display the contents of the SD card
-  function displaySDContents(file) {
+  function displaySDContents() {
+    var fileInput = document.getElementById('fileInput');
+    var file = fileInput.files[0];
     var reader = new FileReader();
     reader.onload = function(event) {
       var contents = event.target.result;
