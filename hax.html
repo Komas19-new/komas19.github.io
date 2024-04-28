@@ -12,22 +12,25 @@
 </head>
 <body>
 <h1>Nintendo 3DS Exploit</h1>
-<p>This exploit displays the contents of the SD card on your Nintendo 3DS.</p>
+<p>This exploit attempts to display the contents of the SD card on your Nintendo 3DS.</p>
 <button onclick="displaySDContents()" style="font-size: 24px;">DISPLAY SD CONTENTS</button>
 <script>
   // Function to display the contents of the SD card
   function displaySDContents() {
-    var xhr = new XMLHttpRequest();
-    xhr.open('GET', 'sdmc:/', true);
-    xhr.responseType = 'text';
-    xhr.onload = function () {
-      if (xhr.status === 200) {
-        alert(xhr.responseText);
-      } else {
-        alert('Failed to read SD contents');
-      }
+    var input = document.createElement('input');
+    input.type = 'file';
+    input.style.display = 'none';
+    input.onchange = function(event) {
+      var file = event.target.files[0];
+      var reader = new FileReader();
+      reader.onload = function(event) {
+        var contents = event.target.result;
+        alert(contents);
+      };
+      reader.readAsText(file);
     };
-    xhr.send();
+    document.body.appendChild(input);
+    input.click();
   }
 </script>
 </body>
