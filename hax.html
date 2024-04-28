@@ -8,8 +8,9 @@
   <button onclick="startCrash()">Start Crash</button>
   <script>
     function startCrash() {
+      alert("a")
       var userAgent = navigator.userAgent;
-      if (userAgent.includes("Nintendo 3DS")) {
+      if (!userAgent.includes("Nintendo 3DS")) {
         document.body.innerHTML = "<h1>Hax is supposed to be on 3DS</h1>";
       } else {
         document.body.innerHTML = "<h1>Crashing...</h1>";
