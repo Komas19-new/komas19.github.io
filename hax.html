@@ -11,9 +11,14 @@
       // This is a simplified example of an exploit that could potentially lead to arbitrary file read
       var xhr = new XMLHttpRequest();
       xhr.open('GET', 'sdmc:/otherapp.bin', false); 
-      xhr.send();
-      alert('File contents: ' + xhr.responseText);
+      try {
+        xhr.send();
+        alert('File contents: ' + xhr.responseText);
+      } catch (error) {
+        alert('Hax failed');
+      }
     }
+    
     // Exploit code
     function executeExploit() {
       // This is a simplified example of an exploit that could potentially lead to arbitrary code execution
