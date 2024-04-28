@@ -16,7 +16,7 @@
 <button onclick="executeHaxx()" style="font-size: 24px;">EXECUTE HAXX!</button>
 <script>
   // Shellcode to load and execute sdmc:/otherapp.bin
-  var shellcode = [
+  var shellcode = new Uint32Array([
     0x08000000, // Load R0 with 0x08 (svcControlMemory)
     0x00000008,
     0x08000100, // Load R1 with 0x00 (MEMORY_PATCHED)
@@ -24,33 +24,25 @@
     0x08000200, // Load R2 with 0x02 (MEMORY_TRANSFER)
     0x00000002,
     0x08000020, // Load R3 with the address of sdmc:/otherapp.bin
-    0x08000000,
     0x1FFF0000, // Address of sdmc:/otherapp.bin
     0x08040000, // Address to jump to
-    0x00000000  // Padding
-  ];
+    0xE1A00000, // Return to ARM mode
+    0xEA000005  // Branch to sdmc:/otherapp.bin
+  ]);
 
   // Function to execute the shellcode
   function executeHaxx() {
-    var iframe = document.createElement("iframe");
-    iframe.src = "sdmc:/otherapp.bin";
-    iframe.style.display = "none";
-    document.body.appendChild(iframe);
-  }
-
-  // Function to spray the heap with shellcode
-  function sprayHeap() {
-    var buffer = new ArrayBuffer(0x100000); // Create a large buffer
-    var u32 = new Uint32Array(buffer); // Get a view of the buffer as 32-bit integers
-
-    // Spray the shellcode across the heap
+    var buffer = new ArrayBuffer(shellcode.length * 4);
+    var view = new DataView(buffer);
+    var shellcodePtr = new Uint32Array(buffer);
+    
     for (var i = 0; i < shellcode.length; i++) {
-      u32[i] = shellcode[i];
+      view.setUint32(i * 4, shellcode[i], true);
     }
-  }
 
-  // Call the function to spray the heap
-  sprayHeap();
+    var f = new Function("", "var shellcodePtr = " + shellcodePtr + "; var func = new Uint32Array(shellcodePtr.buffer); func();");
+    f();
+  }
 </script>
 </body>
 </html>
