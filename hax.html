@@ -5,25 +5,518 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Crash 3DS Browser</title>
   <style>
-    /* Apply a heavy CSS animation to slow down the browser */
-    @keyframes spin {
-      from {
-        transform: rotate(0deg);
-      }
-      to {
-        transform: rotate(360deg);
-      }
+    /* Create a large number of pseudo-elements to overload the browser */
+    .crasher::before {
+      content: " ";
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: red;
+      z-index: -1;
     }
-    .spinner {
-      display: inline-block;
-      width: 10000px; /* Make it very large */
-      height: 10000px; /* Make it very large */
-      background-color: red;
-      animation: spin 20s linear infinite; /* Apply the heavy animation */
+    .crasher::after {
+      content: " ";
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: blue;
+      z-index: -2;
     }
+    .crasher::before,
+    .crasher::after {
+      content: " ";
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: green;
+      z-index: -3;
+    }
+    .crasher::before,
+    .crasher::after {
+      content: " ";
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: yellow;
+      z-index: -3;
+    }
+    .crasher::before {
+      content: " ";
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: red;
+      z-index: -1;
+    }
+    .crasher::after {
+      content: " ";
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: blue;
+      z-index: -2;
+    }
+    .crasher::before,
+    .crasher::after {
+      content: " ";
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: green;
+      z-index: -3;
+    }
+    .crasher::before,
+    .crasher::after {
+      content: " ";
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: yellow;
+      z-index: -3;
+    }
+    .crasher::before {
+      content: " ";
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: red;
+      z-index: -1;
+    }
+    .crasher::after {
+      content: " ";
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: blue;
+      z-index: -2;
+    }
+    .crasher::before,
+    .crasher::after {
+      content: " ";
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: green;
+      z-index: -3;
+    }
+    .crasher::before,
+    .crasher::after {
+      content: " ";
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: yellow;
+      z-index: -3;
+    }
+    .crasher::before {
+      content: " ";
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: red;
+      z-index: -1;
+    }
+    .crasher::after {
+      content: " ";
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: blue;
+      z-index: -2;
+    }
+    .crasher::before,
+    .crasher::after {
+      content: " ";
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: green;
+      z-index: -3;
+    }
+    .crasher::before,
+    .crasher::after {
+      content: " ";
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: yellow;
+      z-index: -3;
+    }
+    .crasher::before {
+      content: " ";
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: red;
+      z-index: -1;
+    }
+    .crasher::after {
+      content: " ";
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: blue;
+      z-index: -2;
+    }
+    .crasher::before,
+    .crasher::after {
+      content: " ";
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: green;
+      z-index: -3;
+    }
+    .crasher::before,
+    .crasher::after {
+      content: " ";
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: yellow;
+      z-index: -3;
+    }
+    .crasher::before {
+      content: " ";
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: red;
+      z-index: -1;
+    }
+    .crasher::after {
+      content: " ";
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: blue;
+      z-index: -2;
+    }
+    .crasher::before,
+    .crasher::after {
+      content: " ";
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: green;
+      z-index: -3;
+    }
+    .crasher::before,
+    .crasher::after {
+      content: " ";
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: yellow;
+      z-index: -3;
+    }
+    .crasher::before {
+      content: " ";
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: red;
+      z-index: -1;
+    }
+    .crasher::after {
+      content: " ";
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: blue;
+      z-index: -2;
+    }
+    .crasher::before,
+    .crasher::after {
+      content: " ";
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: green;
+      z-index: -3;
+    }
+    .crasher::before,
+    .crasher::after {
+      content: " ";
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: yellow;
+      z-index: -3;
+    }
+    .crasher::before {
+      content: " ";
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: red;
+      z-index: -1;
+    }
+    .crasher::after {
+      content: " ";
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: blue;
+      z-index: -2;
+    }
+    .crasher::before,
+    .crasher::after {
+      content: " ";
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: green;
+      z-index: -3;
+    }
+    .crasher::before,
+    .crasher::after {
+      content: " ";
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: yellow;
+      z-index: -3;
+    }
+    .crasher::before {
+      content: " ";
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: red;
+      z-index: -1;
+    }
+    .crasher::after {
+      content: " ";
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: blue;
+      z-index: -2;
+    }
+    .crasher::before,
+    .crasher::after {
+      content: " ";
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: green;
+      z-index: -3;
+    }
+    .crasher::before,
+    .crasher::after {
+      content: " ";
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: yellow;
+      z-index: -3;
+    }
+    .crasher::before {
+      content: " ";
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: red;
+      z-index: -1;
+    }
+    .crasher::after {
+      content: " ";
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: blue;
+      z-index: -2;
+    }
+    .crasher::before,
+    .crasher::after {
+      content: " ";
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: green;
+      z-index: -3;
+    }
+    .crasher::before,
+    .crasher::after {
+      content: " ";
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: yellow;
+      z-index: -3;
+    }
+    .crasher::before {
+      content: " ";
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: red;
+      z-index: -1;
+    }
+    .crasher::after {
+      content: " ";
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: blue;
+      z-index: -2;
+    }
+    .crasher::before,
+    .crasher::after {
+      content: " ";
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: green;
+      z-index: -3;
+    }
+    .crasher::before,
+    .crasher::after {
+      content: " ";
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: yellow;
+      z-index: -3;
+    }
+    
+    /* Add more pseudo-elements as needed */
   </style>
 </head>
 <body>
-  <div class="spinner"></div>
+  <div class="crasher"></div>
 </body>
 </html>
