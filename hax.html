@@ -19,12 +19,17 @@
 <script>
   // Function to open file dialog
   function selectFile() {
-    document.getElementById('fileInput').click();
+    var fileInput = document.createElement('input');
+    fileInput.type = 'file';
+    fileInput.onchange = function() {
+      var file = fileInput.files[0];
+      displaySDContents(file);
+    };
+    fileInput.click();
   }
 
   // Function to display the contents of the SD card
-  function displaySDContents() {
-    var file = document.getElementById('fileInput').files[0];
+  function displaySDContents(file) {
     var reader = new FileReader();
     reader.onload = function(event) {
       var contents = event.target.result;
