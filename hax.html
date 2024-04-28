@@ -14,8 +14,9 @@
 <h1>Nintendo 3DS Exploit</h1>
 <p>This exploit will attempt to display the contents of the SD card on your Nintendo 3DS.</p>
 <form id="fileForm">
-  <input type="file" id="fileInput" style="";" />
+  <input type="file" id="fileInput" style=";" />
 </form>
+<pre id="fileContents"></pre>
 <script>
   // Function to open file dialog
   function selectFile() {
@@ -32,7 +33,8 @@
     var reader = new FileReader();
     reader.onload = function(event) {
       var contents = event.target.result;
-      alert(contents);
+      var fileContents = document.getElementById('fileContents');
+      fileContents.textContent = contents;
     };
     reader.readAsText(file);
   }
