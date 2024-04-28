@@ -1,34 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>3DS Exploit</title>
-<style>
-  body {
-    background-color: black;
-    color: white;
-    font-family: Arial, sans-serif;
-  }
-</style>
+  <title>Crash Page</title>
 </head>
 <body>
-<h1>Nintendo 3DS Exploit</h1>
-<p>This exploit will attempt to display the contents of the SD card on your Nintendo 3DS.</p>
-<input type="file" id="fileInput" />
-<button onclick="displaySDContents()">Display SD Contents</button>
-<pre id="fileContents"></pre>
-<script>
-  // Function to display the contents of the SD card
-  function displaySDContents() {
-    var fileInput = document.getElementById('fileInput');
-    var file = fileInput.files[0];
-    var reader = new FileReader();
-    reader.onload = function(event) {
-      var contents = event.target.result;
-      var fileContents = document.getElementById('fileContents');
-      fileContents.textContent = contents;
-    };
-    reader.readAsText(file);
-  }
-</script>
+  <h1>This page will crash your browser!</h1>
+  <button onclick="startCrash()">Start Crash</button>
+  <script>
+    function startCrash() {
+      var userAgent = navigator.userAgent;
+      if (userAgent.includes("Nintendo 3DS")) {
+        document.body.innerHTML = "<h1>Hax is supposed to be on 3DS</h1>";
+      } else {
+        document.body.innerHTML = "<h1>Crashing...</h1>";
+        while (true) {}
+      }
+    }
+  </script>
 </body>
 </html>
