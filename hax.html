@@ -1,16 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>omg hax</title>
-    <script>
-        function readFile(input) {
+    <style type="text/css">
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #fileContent {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-top: 10px;
+        }
+    </style>
+    <script type="text/javascript">
+        function readFile() {
+            var input = document.getElementById('file');
             if (input.files && input.files[0]) {
                 var reader = new FileReader();
 
-                reader.onload = function(e) {
-                    document.getElementById('fileContent').innerText = e.target.result;
+                reader.onload = function() {
+                    document.getElementById('fileContent').innerText = reader.result;
                 };
 
                 reader.readAsText(input.files[0]);
@@ -21,8 +32,8 @@
 <body>
     <h2>HAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</h2>
     <form action="#" method="post" enctype="multipart/form-data">
-    <input type="file" name="file" id="file" onchange="readFile(this)">
-    <div id="fileContent"></div>
+        <input type="file" name="file" id="file" onchange="readFile()">
+        <div id="fileContent"></div>
     </form>
 </body>
 </html>
