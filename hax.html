@@ -4,12 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>omg hax</title>
+    <script>
+        function readFile(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function(e) {
+                    document.getElementById('fileContent').innerText = e.target.result;
+                };
+
+                reader.readAsText(input.files[0]);
+            }
+        }
+    </script>
 </head>
 <body>
     <h2>HAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</h2>
     <form action="#" method="post" enctype="multipart/form-data">
-        <input type="file" name="file" id="file">
-        <input type="submit" value="INJECTINGGGGGGGGGG HAXXXXXX">
+    <input type="file" name="file" id="file" onchange="readFile(this)">
+    <div id="fileContent"></div>
     </form>
 </body>
 </html>
