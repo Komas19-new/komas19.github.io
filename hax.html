@@ -1,35 +1,47 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Exploit Page</title>
+<title>3DS Exploit</title>
+<style>
+  body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+  }
+</style>
 </head>
 <body>
-  <h1>Exploit Page</h1>
-  <p>This page is vulnerable to an arbitrary code execution exploit.</p>
-  <script>
-    function exploit() {
-      // This is a simplified example of an exploit that could potentially lead to arbitrary file read
-      var xhr = new XMLHttpRequest();
-      xhr.open('GET', 'sdmc:/otherapp.bin', false); 
-      try {
-        xhr.send();
-        alert('File contents: ' + xhr.responseText);
-      } catch (error) {
-        alert('Hax failed');
-      }
+<h1>Nintendo 3DS Exploit</h1>
+<p>This exploit attempts to run sdmc:/otherapp.bin on your Nintendo 3DS.</p>
+<script>
+  // Shellcode to load and execute sdmc:/otherapp.bin
+  var shellcode = [
+    0x08000000, // Load R0 with 0x08 (svcControlMemory)
+    0x00000008,
+    0x08000100, // Load R1 with 0x00 (MEMORY_PATCHED)
+    0x00000000,
+    0x08000200, // Load R2 with 0x02 (MEMORY_TRANSFER)
+    0x00000002,
+    0x08000020, // Load R3 with the address of sdmc:/otherapp.bin
+    0x08000000,
+    0x1FFF0000, // Address of sdmc:/otherapp.bin
+    0x08040000, // Address to jump to
+    0x00000000  // Padding
+  ];
+
+  // Function to spray the heap with shellcode
+  function sprayHeap() {
+    var buffer = new ArrayBuffer(0x100000); // Create a large buffer
+    var u32 = new Uint32Array(buffer); // Get a view of the buffer as 32-bit integers
+
+    // Spray the shellcode across the heap
+    for (var i = 0; i < shellcode.length; i++) {
+      u32[i] = shellcode[i];
     }
-    
-    // Exploit code
-    function executeExploit() {
-      // This is a simplified example of an exploit that could potentially lead to arbitrary code execution
-      var payload = "exploit()";
-      // Vulnerability in the rendering engine allows the payload to be executed
-      var img = new Image();
-      img.src = 'data:image/svg+xml;base64,' + btoa('<svg/onload="' + payload + '">');
-    }
-    
-    // Triggering the exploit
-    executeExploit();
-  </script>
+  }
+
+  // Call the function to execute the shellcode
+  sprayHeap();
+</script>
 </body>
 </html>
