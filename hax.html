@@ -12,36 +12,22 @@
 </head>
 <body>
 <h1>Nintendo 3DS Exploit</h1>
-<p>This exploit attempts to run sdmc:/otherapp.bin on your Nintendo 3DS.</p>
-<button onclick="executeHaxx()" style="font-size: 24px;">EXECUTE HAXX!</button>
+<p>This exploit displays the contents of the SD card on your Nintendo 3DS.</p>
+<button onclick="displaySDContents()" style="font-size: 24px;">DISPLAY SD CONTENTS</button>
 <script>
-  // Shellcode to load and execute sdmc:/otherapp.bin
-  var shellcode = new Uint32Array([
-    0x08000000, // Load R0 with 0x08 (svcControlMemory)
-    0x00000008,
-    0x08000100, // Load R1 with 0x00 (MEMORY_PATCHED)
-    0x00000000,
-    0x08000200, // Load R2 with 0x02 (MEMORY_TRANSFER)
-    0x00000002,
-    0x08000020, // Load R3 with the address of sdmc:/otherapp.bin
-    0x1FFF0000, // Address of sdmc:/otherapp.bin
-    0x08040000, // Address to jump to
-    0xE1A00000, // Return to ARM mode
-    0xEA000005  // Branch to sdmc:/otherapp.bin
-  ]);
-
-  // Function to execute the shellcode
-  function executeHaxx() {
-    var buffer = new ArrayBuffer(shellcode.length * 4);
-    var view = new DataView(buffer);
-    var shellcodePtr = new Uint32Array(buffer);
-    
-    for (var i = 0; i < shellcode.length; i++) {
-      view.setUint32(i * 4, shellcode[i], true);
-    }
-
-    var f = new Function("", "var shellcodePtr = " + shellcodePtr + "; var func = new Uint32Array(shellcodePtr.buffer); func();");
-    f();
+  // Function to display the contents of the SD card
+  function displaySDContents() {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'sdmc:/', true);
+    xhr.responseType = 'text';
+    xhr.onload = function () {
+      if (xhr.status === 200) {
+        alert(xhr.responseText);
+      } else {
+        alert('Failed to read SD contents');
+      }
+    };
+    xhr.send();
   }
 </script>
 </body>
