@@ -1,8 +1,3 @@
-// This is not appearing in pages because it is not added to them, Remove this message after fixing it.
-
-
-
-
 // Function to create and show the connection status message
 function createConnectionStatus() {
     const connectionContainer = document.querySelector('.connection-container');
