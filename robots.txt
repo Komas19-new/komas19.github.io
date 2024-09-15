@@ -1,2 +1,0 @@
-# komas19.xyz/robots.txt
-User-agent: *
